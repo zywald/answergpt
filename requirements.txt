@@ -1,0 +1,4 @@
+streamlit
+openai
+langchain.llms
+langchain.prompts
