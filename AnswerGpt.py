@@ -42,8 +42,8 @@ def define_instructions(original_message, key_points, synthetic_level, tone):
         2: "Make the response somewhat detailed, but still fairly concise. ",
         3: "Balance conciseness and detail in the response. ",
         4: "Make the response somewhat concise, but with some detail. ",
-        5: "Make the response relatively concise. ",
-        6: "Make the response very concise and straightforward. "
+        5: "Make the response concise. ",
+        6: "Make the response extremely concise, straightforward and very short. "
     }
 
     # Define the specific instructions based on user input
