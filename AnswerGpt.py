@@ -13,7 +13,7 @@ st.sidebar.markdown("""
 1. **Enter the original email that you want to reply to.**
 2. **Enter key points that should be included in the email response.**
 3. **Select the tone of the email response.**
-4. **Adjust the synthetic level of the response.**
+4. **Adjust the length of the response.**
 5. **Click "Submit" to generate the email response.** You can copy and modify the response in the "Email Response" box.
 """)
 
@@ -34,16 +34,17 @@ def define_instructions(original_message, key_points, synthetic_level, tone):
     common_instructions = (
         "You are an AI assistant with expertise in crafting email responses. "
         "Your responses should be clear, utilizing proper structured techniques like bullet points, and paragraph breaks where needed. "
+        "You will respond in the language of the email you must respond to".
     )
 
     synthetic_level_instructions = {
-        0: "Use complex sentence structures, longer sentences, and more formal language. ",
-        1: "Make the response relatively detailed. ",
-        2: "Make the response somewhat detailed, but still fairly concise. ",
+        6: "Use complex sentence structures, longer sentences, and more formal language. ",
+        5: "Make the response relatively detailed. ",
+        4: "Make the response somewhat detailed, but still fairly concise. ",
         3: "Balance conciseness and detail in the response. ",
-        4: "Make the response somewhat concise, but with some detail. ",
-        5: "Make the response concise. ",
-        6: "Make the response extremely concise, straightforward and very short. "
+        2: "Make the response somewhat concise, but with some detail. ",
+        1: "Make the response concise. ",
+        0: "Make the response extremely concise, straightforward and very short. "
     }
 
     # Define the specific instructions based on user input
