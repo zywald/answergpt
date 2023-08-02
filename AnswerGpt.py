@@ -34,7 +34,7 @@ def define_instructions(original_message, key_points, synthetic_level, tone):
     common_instructions = (
         "You are an AI assistant with expertise in crafting email responses. "
         "Your responses should be clear, utilizing proper structured techniques like bullet points, and paragraph breaks where needed. "
-        "You will respond in the language of the email you must respond to".
+        "You will respond in the language of the email you must respond to"
     )
 
     synthetic_level_instructions = {
