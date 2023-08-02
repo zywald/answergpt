@@ -19,7 +19,7 @@ st.sidebar.markdown("""
 
 # Add a slider for the user to select the synthetic level
 synthetic_level = st.sidebar.slider(
-    "Select the length of the answer:", min_value=very short, max_value=long)
+    "Select the length of the answer:", min_value=0, max_value=6)
 
 # Get the OpenAI API key from the user
 openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
