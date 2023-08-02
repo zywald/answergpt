@@ -19,7 +19,7 @@ st.sidebar.markdown("""
 
 # Add a slider for the user to select the synthetic level
 synthetic_level = st.sidebar.slider(
-    "Select the synthetic level:", min_value=0, max_value=6)
+    "Select the length of the answer:", min_value=very short, max_value=long)
 
 # Get the OpenAI API key from the user
 openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
@@ -38,7 +38,7 @@ def define_instructions(original_message, key_points, synthetic_level, tone):
     )
 
     synthetic_level_instructions = {
-        6: "Use complex sentence structures, longer sentences, and more formal language. ",
+        6: "Use complex sentence structures, longer sentences, and more details. ",
         5: "Make the response relatively detailed. ",
         4: "Make the response somewhat detailed, but still fairly concise. ",
         3: "Balance conciseness and detail in the response. ",
